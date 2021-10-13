@@ -1,7 +1,16 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
 
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useTranslation } from "next-i18next";
+
+import { useRouter, NextRouter } from "next/router";
+import Link from "next/link";
+
 const Home: NextPage = () => {
+  const { t } = useTranslation("firstPage");
+  const router: NextRouter = useRouter();
+
   return (
     <div className="">
       <Head>
@@ -10,9 +19,18 @@ const Home: NextPage = () => {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="">
-        <h1>change locale</h1>
+      <div className="bg-red-300 w-full h-20">
+        
+      </div>
+      <div className="bg-blue-300">
+        <Link href="/" locale="en"><a><button>To English locale</button></a></Link>
+        <Link href="/" locale="de"><a><button>To German locale</button></a></Link>
+        <Link href="/" locale="fr"><a><button>To French locale</button></a></Link>
+        <Link href="/" locale="ja"><a><button>To Japanese locale</button></a></Link>
 
+        <h1>change locale</h1>
+        <h1>testing sentence: {t("testing")}</h1>
+        <h1>current locale: {router.locale}</h1>
       </div>
       <main>
         <h1>Welcome</h1>
@@ -21,5 +39,11 @@ const Home: NextPage = () => {
     </div>
   )
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale!, ["common", "firstPage"]),
+  }
+})
 
 export default Home
