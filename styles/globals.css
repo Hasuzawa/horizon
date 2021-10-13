@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* note that snap behaviour only takes effect when parent cannot contain all, so a all-showing page will not exhibit snap effect*/
+  .scroll-snap-y-madatory {
+    scroll-snap-type: y mandatory;
+  }
+  .scroll-snap-start {
+    scroll-snap-align: start;
+  }
+
+  .smooth-scroll-y {
+    scroll-behavior: smooth;
+  }
+}
+
 
 html,
 body {
