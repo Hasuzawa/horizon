@@ -2549,6 +2549,7 @@ __metadata:
     postcss: latest
     react: ^17.0.2
     react-dom: 17.0.2
+    react-intersection-observer: ^8.32.1
     tailwindcss: latest
     typescript: 4.4.3
   languageName: unknown
@@ -4471,6 +4472,15 @@ __metadata:
     i18next: ">= 19.0.0"
     react: ">= 16.8.0"
   checksum: 985e1ede08ab4e1235a03680d339cb558c7c360e5435924587c383dd1c5a183d0656d1f72e59deda757864c78e137d0c664f9daadf9ccdca42ca56cce5db7b23
+  languageName: node
+  linkType: hard
+
+"react-intersection-observer@npm:^8.32.1":
+  version: 8.32.1
+  resolution: "react-intersection-observer@npm:8.32.1"
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
+  checksum: 3bd4419a468299909774287244ce33390a6a2770da241fd0b53e8594b7e4ad4ffe9d08bceec616d297194a78680401029231d19388871469a0e234558de2fa47
   languageName: node
   linkType: hard
 
