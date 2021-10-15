@@ -13,6 +13,7 @@ import { useInView } from "react-intersection-observer";
 import TopBar, {topBarHeight} from "~/components/TopBar";
 import Screen0 from "~/components/screen0";
 import Screen1 from "~/components/screen1";
+import Screen2 from "~/components/screen2";
 
 import { useState, useEffect } from "react";
 
@@ -74,10 +75,8 @@ const Home: NextPage = () => {
 
         <Screen0 />
         <Screen1 />
+        <Screen2 />
 
-        <div className="w-screen h-screen bg-purple-300 scroll-snap-start">
-
-        </div>
         <div className="w-screen h-screen bg-indigo-700 scroll-snap-start" ref={ref}>
 
         </div>
@@ -92,7 +91,7 @@ const Home: NextPage = () => {
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale!, ["common", "firstPage"]),
+    ...await serverSideTranslations(locale!, ["firstPage", "screen0"]),
   }
 })
 
