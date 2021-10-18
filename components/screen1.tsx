@@ -58,6 +58,7 @@ const Screen1 = (): JSX.Element => {
                         {t("header2")
                     }</motion.h1>
                 </motion.div>
+                
                 }
             </AnimatePresence>
         </div>

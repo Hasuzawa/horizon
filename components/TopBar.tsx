@@ -30,7 +30,7 @@ interface TopBarProps {
 }
 
 const TopBar = (props: TopBarProps) => {
-    const { t } = useTranslation("firstPage");
+    const { t } = useTranslation("TopBar");
     const router: NextRouter = useRouter();
 
     return (

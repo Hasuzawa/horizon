@@ -25,11 +25,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
+.screen {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
 }
