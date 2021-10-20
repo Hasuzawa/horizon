@@ -14,6 +14,8 @@ import TopBar, {topBarHeight} from "~/components/TopBar";
 import Screen0 from "~/components/screen0";
 import Screen1 from "~/components/screen1";
 import Screen2 from "~/components/screen2";
+import Screen3 from "~/components/screen3";
+import Screen4 from "~/components/screen4";
 
 import { useState, useEffect } from "react";
 
@@ -77,13 +79,15 @@ const Home: NextPage = () => {
         <Screen0 />
         <Screen1 />
         <Screen2 />
+        <Screen3 />
+        <Screen4 />
 
-        <div className="w-screen h-screen bg-indigo-700 scroll-snap-start" ref={ref}>
+        {/* <div className="w-screen h-screen bg-yellow-200 scroll-snap-start" ref={ref}>
 
-        </div>
-        <div className="w-screen h-screen bg-pink-300 scroll-snap-start">
+        </div> */}
+        {/* <div className="w-screen h-screen bg-pink-300 scroll-snap-start">
 
-        </div>
+        </div> */}
       </main>
 
     </div>

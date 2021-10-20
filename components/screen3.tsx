@@ -21,13 +21,13 @@ const fadeIn: Variants = {
     },
 }
 
-const Screen2 = (): JSX.Element => {
+const Screen3 = (): JSX.Element => {
     const router: NextRouter = useRouter();
-    const { t } = useTranslation("screen2");
+    const { t } = useTranslation("screen3");
     const { ref, inView, entry} = useInView({threshold: 0.7});
     
     return (
-        <div className="w-screen h-screen bg-purple-300 scroll-snap-start relative"
+        <div className="w-screen h-screen bg-yellow-200 scroll-snap-start relative"
             ref={ref}
         >
             <AnimatePresence>
@@ -63,4 +63,4 @@ const Screen2 = (): JSX.Element => {
     )
 }
 
-export default Screen2;
+export default Screen3;

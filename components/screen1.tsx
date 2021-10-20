@@ -23,7 +23,7 @@ const fadeIn: Variants = {
 
 const Screen1 = (): JSX.Element => {
     const router: NextRouter = useRouter();
-    const { t } = useTranslation("screen0");
+    const { t } = useTranslation("screen1");
     const { ref, inView, entry} = useInView({threshold: 0.7});
 
     return (
@@ -58,7 +58,6 @@ const Screen1 = (): JSX.Element => {
                         {t("header2")
                     }</motion.h1>
                 </motion.div>
-                
                 }
             </AnimatePresence>
         </div>
